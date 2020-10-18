@@ -1,5 +1,6 @@
 package deqo.salf.mysimplestack;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.EmptyStackException;
@@ -25,8 +26,8 @@ public class SimpleStackTest {
         assertSame ("Pushed item should be on top of stack ", item , stack.peek());
     }
 
-    @Test (expected = EmptyStackException.class)
-    public void testPopOnEmptyStack () throws EmptyStackException {
+    @Test (expected = IndexOutOfBoundsException.class)
+    public void testPopOnEmptyStack () throws IndexOutOfBoundsException {
         ISimpleStack stack = new SimpleStack();
         stack.pop(); //Should throws an EmptyStackException
     }

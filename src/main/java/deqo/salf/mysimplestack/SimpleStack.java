@@ -27,7 +27,7 @@ public class SimpleStack implements ISimpleStack {
     }
 
     @Override
-    public Item pop() throws EmptyStackException {
+    public Item pop() throws IndexOutOfBoundsException {
         return stack.remove(0);
     }
 }
